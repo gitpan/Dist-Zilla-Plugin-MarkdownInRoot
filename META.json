@@ -1,0 +1,67 @@
+{
+   "abstract" : "README.mkdn in the project root with links to Meta::CPAN",
+   "author" : [
+      "Peter Flanigan <pjfl@cpan.org>"
+   ],
+   "dynamic_config" : "1",
+   "generated_by" : "Dist::Zilla version 4.300033, CPAN::Meta::Converter version 2.120921",
+   "license" : [
+      "perl_5"
+   ],
+   "meta-spec" : {
+      "url" : "http://search.cpan.org/perldoc?CPAN::Meta::Spec",
+      "version" : "2"
+   },
+   "name" : "Dist-Zilla-Plugin-MarkdownInRoot",
+   "no_index" : {
+      "directory" : [
+         "examples",
+         "inc",
+         "share",
+         "t"
+      ]
+   },
+   "prereqs" : {
+      "build" : {
+         "requires" : {
+            "Module::Build" : "0.4004",
+            "version" : "0.88"
+         }
+      },
+      "configure" : {
+         "requires" : {
+            "Module::Build" : "0.4004",
+            "version" : "0.88"
+         }
+      },
+      "runtime" : {
+         "requires" : {
+            "Dist::Zilla::Plugin::ReadmeAnyFromPod" : "0.120120",
+            "Moose" : "2.0802"
+         }
+      }
+   },
+   "provides" : {
+      "Dist::Zilla::Plugin::MarkdownInRoot" : {
+         "file" : "lib/Dist/Zilla/Plugin/MarkdownInRoot.pm",
+         "version" : "v0.1.2"
+      },
+      "Dist::Zilla::Plugin::MarkdownInRoot::WithMetaLinks" : {
+         "file" : "lib/Dist/Zilla/Plugin/MarkdownInRoot/WithMetaLinks.pm",
+         "version" : "v0.1.2"
+      }
+   },
+   "release_status" : "stable",
+   "resources" : {
+      "bugtracker" : {
+         "mailto" : "bug-Dist-Zilla-Plugin-MarkdownInRoot@rt.cpan.org",
+         "web" : "http://rt.cpan.org/NoAuth/Bugs.html?Dist=Dist-Zilla-Plugin-MarkdownInRoot"
+      },
+      "homepage" : "https://metacpan.org/author/PJFL",
+      "license" : [
+         "http://dev.perl.org/licenses/"
+      ]
+   },
+   "version" : "0.1.2"
+}
+
