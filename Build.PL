@@ -1,4 +1,4 @@
-# @(#)$Ident: Build.PL 2013-08-14 14:45 pjf ;
+# @(#)$Ident: DZ_Build.PL 2013-08-15 13:04 pjf ;
 
 use strict;
 use warnings;
@@ -7,12 +7,14 @@ use Module::Build;
 
 sub whimper { print {*STDOUT} $_[ 0 ]."\n"; exit 0 }
 
-my $code = do { local $/; <DATA> }; my $perl_ver = 5.008;
+my $perl_ver = 5.008;
+my $name     = 'Dist-Zilla-Plugin-MarkdownInRoot'; $name =~ s{ - }{::}gmx;
 
-$] >= $perl_ver or whimper "Minimum required Perl version is ${perl_ver}";
+$] >= $perl_ver or $ENV{PERL5_CPANPLUS_IS_VERSION}
+   or whimper "Minimum required Perl version is ${perl_ver}";
 
-Module::Build->subclass( code => $code )->new(
-  'module_name' => 'Dist::Zilla::Plugin::MarkdownInRoot',
+Module::Build->subclass( code => do { local $/; <DATA> } )->new(
+  'module_name' => $name,
   'notes'       => { min_perl_version => $perl_ver },
   'build_requires' => {
     'Module::Build' => '0.4004',
@@ -24,7 +26,9 @@ Module::Build->subclass( code => $code )->new(
   },
   'requires' => {
     'Dist::Zilla::Plugin::ReadmeAnyFromPod' => '0.120120',
-    'Moose' => '2.0802'
+    'Moose' => '2.0802',
+    'Pod::Markdown' => '1.322',
+    'perl' => '5.008'
   },
 
 )->create_build_script;

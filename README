@@ -7,7 +7,7 @@ Synopsis
        filename = README.md
 
 Version
-    This documents version v0.1.$Rev: 2 $ of
+    This documents version v0.1.$Rev: 3 $ of
     Dist::Zilla::Plugin::MarkdownInRoot
 
 Description
