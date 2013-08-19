@@ -37,6 +37,7 @@
       "runtime" : {
          "requires" : {
             "Dist::Zilla::Plugin::ReadmeAnyFromPod" : "0.120120",
+            "IO::Stringy" : "2.110",
             "Moose" : "2.0802",
             "Pod::Markdown" : "1.322",
             "perl" : "5.008"
@@ -46,7 +47,7 @@
    "provides" : {
       "Dist::Zilla::Plugin::MarkdownInRoot" : {
          "file" : "lib/Dist/Zilla/Plugin/MarkdownInRoot.pm",
-         "version" : "v0.1.3"
+         "version" : "v0.1.5"
       },
       "Dist::Zilla::Plugin::MarkdownInRoot::WithMetaLinks" : {
          "file" : "lib/Dist/Zilla/Plugin/MarkdownInRoot/WithMetaLinks.pm",
@@ -64,6 +65,6 @@
          "http://dev.perl.org/licenses/"
       ]
    },
-   "version" : "0.1.3"
+   "version" : "0.1.5"
 }
 

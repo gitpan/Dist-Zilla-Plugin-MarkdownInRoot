@@ -1,8 +1,8 @@
-# @(#)Ident: MarkdownInRoot.pm 2013-08-14 13:57 pjf ;
+# @(#)Ident: MarkdownInRoot.pm 2013-08-19 14:19 pjf ;
 
 package Dist::Zilla::Plugin::MarkdownInRoot;
 
-use version; our $VERSION = qv( sprintf '0.1.%d', q$Rev: 3 $ =~ /\d+/gmx );
+use version; our $VERSION = qv( sprintf '0.1.%d', q$Rev: 5 $ =~ /\d+/gmx );
 
 use Moose;
 
@@ -38,7 +38,7 @@ Dist::Zilla::Plugin::MarkdownInRoot - README.mkdn in the project root with links
 
 =head1 Version
 
-This documents version v0.1.$Rev: 3 $ of L<Dist::Zilla::Plugin::MarkdownInRoot>
+This documents version v0.1.$Rev: 5 $ of L<Dist::Zilla::Plugin::MarkdownInRoot>
 
 =head1 Description
 

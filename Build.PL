@@ -26,6 +26,7 @@ Module::Build->subclass( code => do { local $/; <DATA> } )->new(
   },
   'requires' => {
     'Dist::Zilla::Plugin::ReadmeAnyFromPod' => '0.120120',
+    'IO::Stringy' => '2.110',
     'Moose' => '2.0802',
     'Pod::Markdown' => '1.322',
     'perl' => '5.008'
