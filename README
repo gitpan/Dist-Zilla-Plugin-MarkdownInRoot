@@ -1,54 +1,68 @@
 Name
+
     Dist::Zilla::Plugin::MarkdownInRoot - README.mkdn in the project root
     with links to Meta::CPAN
 
 Synopsis
+
        [MarkdownInRoot::WithMetaLinks]
        filename = README.md
 
 Version
-    This documents version v0.1.$Rev: 5 $ of
+
+    This documents version v0.2.$Rev: 1 $ of
     Dist::Zilla::Plugin::MarkdownInRoot
 
 Description
+
     Creates the README.md file in the project root with hypertext links
-    pointing to "metacpan.org" rather than "search.cpan.org"
+    pointing to metacpan.org rather than search.cpan.org
 
     Useful for distributions on Github which uses the README.md file in the
     project root as a splash page
 
 Configuration and Environment
+
     Defines the following attributes;
 
-    "url_prefix"
-       Defaults to "https://metacpan.org/module/"
+    url_prefix
+
+      Defaults to https://metacpan.org/module/
 
 Subroutines/Methods
-  setup_installer
-    Modifies this base class method. Monkey patches Pod::Markdown to accept
-    configurable URL prefixes
+
+ _setup_parser
+
+    Monkey patches Pod::Markdown to accept configurable URL prefixes
 
 Diagnostics
+
     None
 
 Dependencies
+
     Dist::Zilla::Plugin::ReadmeAnyFromPod
 
 Incompatibilities
+
     There are no known incompatibilities in this module
 
 Bugs and Limitations
+
     There are no known bugs in this module. Please report problems to
-    http://rt.cpan.org/NoAuth/Bugs.html?Dist=Dist-Zilla-Plugin-MarkdownInRoo
-    t. Patches are welcome
+    http://rt.cpan.org/NoAuth/Bugs.html?Dist=Dist-Zilla-Plugin-MarkdownInRo
+    ot. Patches are welcome
 
 Acknowledgements
+
     Larry Wall - For the Perl programming language
 
 Author
-    Peter Flanigan, "<pjfl@cpan.org>"
+
+    Peter Flanigan, <pjfl@cpan.org>
 
 License and Copyright
+
     Copyright (c) 2013 Peter Flanigan. All rights reserved
 
     This program is free software; you can redistribute it and/or modify it

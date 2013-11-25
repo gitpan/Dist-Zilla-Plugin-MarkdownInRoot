@@ -1,5 +1,9 @@
 Revision history for Dist::Zilla::Plugin::MarkdownInRoot
 
+0.2.1     2013-11-25 13:47:13
+          - Bumped dependency on Dist::Zilla::Plugin::ReadmeAnyFromPod
+          - Stopped wrapping setup_installer
+
 0.1.5     2013-08-19 15:19:51
           - Added IO::Stringy dependency
           - Added Pod::Markdown dependency

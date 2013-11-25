@@ -1,8 +1,8 @@
-# @(#)Ident: WithMetaLinks.pm 2013-08-14 13:30 pjf ;
+# @(#)Ident: WithMetaLinks.pm 2013-11-25 13:33 pjf ;
 
 package Dist::Zilla::Plugin::MarkdownInRoot::WithMetaLinks;
 
-use version; our $VERSION = qv( sprintf '0.1.%d', q$Rev: 2 $ =~ /\d+/gmx );
+use version; our $VERSION = qv( sprintf '0.2.%d', q$Rev: 1 $ =~ /\d+/gmx );
 
 use Moose;
 
@@ -11,14 +11,14 @@ extends q(Dist::Zilla::Plugin::MarkdownInRoot);
 has 'url_prefix' => is => 'ro', isa => 'Str',
    default       => 'https://metacpan.org/module/';
 
-around 'setup_installer' => sub {
-   my ($orig, $self, @args) = @_;
+sub BUILD {
+   my $self = shift;
 
    $Dist::Zilla::Plugin::ReadmeAnyFromPod::_types->{markdown}->{parser}
       = $self->_setup_parser;
 
-   return $orig->( $self, @args );
-};
+   return;
+}
 
 sub _setup_parser {
    my $self = shift; my $url_prefix = $self->url_prefix;
